@@ -9,13 +9,12 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Products
   try {
     const test = await Category.findAll({
-      // include: [{model: Product}]
+      include: [{model: Product}]
     });
     res.status(200).json(test);
   } catch(err){
     res.status(500).json(err);
-  }
-  
+  }  
 });
 
 router.get('/:id', (req, res) => {
