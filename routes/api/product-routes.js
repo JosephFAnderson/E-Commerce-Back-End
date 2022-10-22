@@ -14,8 +14,7 @@ router.get('/', async (req, res) => {
     res.status(200).json(test);
   }catch(err){
     res.status(500).json(err);
-  }
-  
+  }  
 });
 
 // get one product
